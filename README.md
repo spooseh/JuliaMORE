@@ -5,13 +5,13 @@ This repository hosts Jupyter notebooks as a hands-on introductory tutorial on J
 
 ## How to use these notebooks?
 Assuming that you have cloned/downloaded the notebookes:
-- install Julia from [julialang.org](https://julialang.org/). Mind the help for your platform. You might need to add it's path manually specially in Windows.
-    * click and run the Julia application (opens a terminal window)
+- install Julia from [julialang.org](https://julialang.org/). On "Windows" select the check-box for "add Julia to path" during the installation.
+    * click and run the Julia application, enters the interactive mode in a terminal window
     ![julia app](./img/terminal.png)
     * the prompt at the command line `julia>` indicating the REPL. Here you can run julia commands
     * go to the cloned directory using `cd("path/to/the/directory")`
     * you can check the current working directory by `pwd()`
-    * alternatively press `;` at REPL to have a "shell" prompt, `shell>`), you can use system commands like `cd` without parantheses here `cd path/to/the/directory`
+    * alternatively press `;` at REPL to have a "shell" prompt, `shell>`), you can use system commands like `cd` without parantheses here `cd path/to/the/directory`. Go back to REPL by pressing backspace. 
     * you could use Terminal (cmd in Windows), `cd` to the cloned directory, run `julia`
 
 - at Julia REPL press `]` to enter package manager (prompt changes to `(@v1.8) pkg>`), `(@v1.8)` indicating the general Julia environment. In Julia every project is isolated in an environment. 
@@ -31,6 +31,14 @@ Assuming that you have cloned/downloaded the notebookes:
     
 - \[Optional:\] install VSCode from [code.visualstudio.com](https://code.visualstudio.com/). It looks like Rstudio :)
     * install [Julia plugin](https://www.julia-vscode.org/docs/dev/gettingstarted/#Installation-and-Configuration-1) for VSCode
+    * go to "setting", search "julia executable"
+    * find your Julia installation path
+        - Linux and Mac: `which julia` in terminal
+            * if you used "snap" in Linux the path would be: "/snap/julia/current/bin/julia" and not "/snap/bin/julia" which is the output of `which`
+        - Windows:  `where julia` in cmd
+            * you should include "julia.exe" at the end as well
+    * paste the result under **Julia: Executable Path**
+    ![](./img/path.png)
 
 <hr>
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img style="right" alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></img></a>
