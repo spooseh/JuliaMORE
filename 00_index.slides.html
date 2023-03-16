@@ -14682,7 +14682,10 @@ div.jp-OutputPrompt {
 <h3 id="Seems-to-be">Seems to be<a class="anchor-link" href="#Seems-to-be">&#182;</a></h3><ul>
 <li>the <strong>bridge</strong> between dynamic (interpreted, scripting) and static (compiled) languages<ul>
 <li>as expressive as Python, R, Matlab, ... (looks like natural languages)</li>
-<li>as fast as C and Fortran (you need to enter the "rabit hole")</li>
+<li>as fast as C and Fortran <ul>
+<li><a href="https://math.mit.edu/~edelman/">Alan Edelman</a>: you need to enter the "rabbit hole" and become a programmer</li>
+</ul>
+</li>
 <li>in Julia types are run-time objects</li>
 </ul>
 </li>
@@ -14700,8 +14703,8 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Offers">Offers<a class="anchor-link" href="#Offers">&#182;</a></h2><ul>
 <li>interactive command-line read–eval–print loop (<a href="https://docs.julialang.org/en/v1/stdlib/REPL/">REPL</a>), prompt: <code>julia&gt;</code></li>
-<li>standard modules (Core and Base)<ul>
-<li>need to be loaded by <code>using ModuleName</code>: Dates, LinearAlgebra, Markdown, Pkg, Printf, Random, Statistics, Unicode</li>
+<li>basic functinalities and types available right away(Core and Base)<ul>
+<li>built-in modules need to be loaded by <code>using ModuleName</code>: Dates, LinearAlgebra, Markdown, Pkg, Printf, Random, Statistics, Unicode</li>
 </ul>
 </li>
 <li>generic programming, types to-be-specified-later</li>
@@ -14714,9 +14717,9 @@ div.jp-OutputPrompt {
 <li>efficient memory management</li>
 <li>efficient support for Unicode</li>
 <li>interaction with C, Fortran, Python, R</li>
-<li>metaprogramming facilities: access to expressions, code generation (eval), <strong>macros</strong></li>
+<li>metaprogramming facilities: access to expressions, code generation (eval), <strong>macros</strong> (advanced topic)</li>
 <li>type expressiveness (less/no typecasting), while still maintaining full static type-safety (advanced topic)<ul>
-<li>"flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages"</li>
+<li><a href="https://docs.julialang.org/en/v1/">Julia Doc</a>: "flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages"</li>
 </ul>
 </li>
 </ul>
@@ -14800,14 +14803,16 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Project-isolation">Project isolation<a class="anchor-link" href="#Project-isolation">&#182;</a></h2><ul>
-<li>manages version and dependency control by <strong>environments</strong> (helps reproducibility)<ul>
-<li>Project.toml</li>
-<li>Manifest.toml</li>
+<li>manages version and dependency control by <strong>environments</strong> (helps reproducibility)</li>
+<li>every environment lives in separate <strong>directory</strong><ul>
+<li><a href="https://pkgdocs.julialang.org/v1/toml-files/">Project.toml</a>: package/project dependencies and compatibility constraints </li>
+<li>Manifest.toml: an absolute record of the state of the packages </li>
+<li>the pair instantiate the exact same package environment (reproducibility)</li>
 </ul>
 </li>
 <li>on Terminal, <code>cd JuliaMORE</code> and <code>julia</code> </li>
 <li>built-in package manager <a href="https://docs.julialang.org/en/v1/stdlib/Pkg/"><strong>Pkg</strong></a>(git based), triggered on Julia REPL<ul>
-<li><code>julia&gt; ]</code> (changes the prompt to <code>(@v1.7) pkg&gt;</code>, <code>backspace</code> to exit)<blockquote><p><code>(@v1.7) pkg&gt; activate .</code>  <br>
+<li><code>julia&gt; ]</code> (changes the prompt to <code>(@v1.8) pkg&gt;</code>, <code>backspace</code> to exit)<blockquote><p><code>(@v1.8) pkg&gt; activate .</code>  <br>
 <code>(JuliaMORE) pkg&gt; add SomePackage</code></p>
 </blockquote>
 </li>
@@ -14846,6 +14851,7 @@ div.jp-OutputPrompt {
 </li>
 </ul>
 </li>
+<li>not object oriented</li>
 <li>advanced flaws: <a href="https://www.youtube.com/watch?v=TPuJsgyu87U">What's Bad About Julia | Jeff Bezanson</a></li>
 </ul>
 
@@ -14884,8 +14890,8 @@ require(
             transition: "slide",
             slideNumber: "",
             plugins: [RevealNotes],
-            width: 1250,
-            height: 800
+	    width: 1250,
+	    height: 800
         });
 
         var update = function(event){
