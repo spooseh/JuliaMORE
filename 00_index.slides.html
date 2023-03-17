@@ -14838,7 +14838,8 @@ div.jp-OutputPrompt {
 <h2 id="Cons">Cons<a class="anchor-link" href="#Cons">&#182;</a></h2><ul>
 <li>immature ecosystem</li>
 <li>still under cunstruction<ul>
-<li>Google $\Rightarrow$ <code>Pkg.installed()</code> $\Rightarrow$ <code>Warning: Pkg.installed() is deprecated</code></li>
+<li>list workspace $\Rightarrow$ Google $\Rightarrow$ <code>whos()</code> $\Rightarrow$ <code>UndefVarError: whos not defined</code> $\Rightarrow$: <code>varinfo()</code></li>
+<li>Google $\Rightarrow$ <code>Pkg.installed()</code> $\Rightarrow$ <code>Warning: Pkg.installed() is deprecated</code>: still works</li>
 </ul>
 </li>
 <li>not always expressive<ul>
@@ -14890,8 +14891,8 @@ require(
             transition: "slide",
             slideNumber: "",
             plugins: [RevealNotes],
-	    width: 1250,
-	    height: 800
+            width: 1250,
+            height: 800
         });
 
         var update = function(event){
