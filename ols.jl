@@ -13,7 +13,7 @@ fm = @formula(Y ~ X)
 
 fit_ols = lm(fm, data)
 
-println(fit_osl)
+println(fit_ols)
 
 # julia --project=./ ols.jl from Terminal
 # include("ols.jl") from REPL
